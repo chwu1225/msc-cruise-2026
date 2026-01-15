@@ -1600,3 +1600,354 @@ ul {
         page-break-inside: avoid;
     }
 }
+
+/* ========================================
+   Todo Checklist Section
+   ======================================== */
+
+.todo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.todo-card {
+    background: var(--white);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-md);
+    border-left: 4px solid var(--gray-300);
+}
+
+.todo-card.priority-high {
+    border-left-color: var(--danger);
+}
+
+.todo-card.priority-medium {
+    border-left-color: var(--warning);
+}
+
+.todo-card.priority-required {
+    border-left-color: var(--msc-blue);
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.todo-card.checklist-summary {
+    border-left-color: var(--success);
+    background: linear-gradient(135deg, #f0fff4 0%, #c6f6d5 100%);
+}
+
+.todo-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-md);
+}
+
+.todo-priority {
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    background: var(--gray-100);
+}
+
+.todo-time {
+    font-size: 0.8rem;
+    color: var(--gray-600);
+}
+
+.todo-card h3 {
+    color: var(--msc-blue);
+    margin-bottom: var(--spacing-md);
+    font-size: 1.2rem;
+}
+
+.todo-content {
+    color: var(--gray-700);
+}
+
+.todo-steps ol, .todo-steps ul {
+    padding-left: 1.5rem;
+    margin: var(--spacing-md) 0;
+}
+
+.todo-steps li {
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.6;
+}
+
+.todo-tips {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+    background: #fff3cd;
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius-md);
+    margin-top: var(--spacing-md);
+    font-size: 0.9rem;
+}
+
+.show-booking-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.show-booking-item {
+    background: var(--gray-100);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius-md);
+}
+
+.show-booking-item.free {
+    border: 2px solid var(--success);
+}
+
+.show-booking-item.paid {
+    border: 2px solid var(--msc-gold);
+}
+
+.show-booking-item h4 {
+    margin-bottom: var(--spacing-sm);
+    color: var(--msc-blue);
+}
+
+.price-tag {
+    display: inline-block;
+    padding: 0.2rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-sm);
+}
+
+.price-tag.free {
+    background: var(--success);
+    color: white;
+}
+
+.price-tag.paid {
+    background: var(--msc-gold);
+    color: white;
+}
+
+.booking-method ul {
+    list-style: none;
+    padding: 0;
+    margin: var(--spacing-sm) 0;
+}
+
+.booking-method li {
+    margin-bottom: 0.25rem;
+    font-size: 0.9rem;
+}
+
+.recommendation, .age-warning {
+    margin-top: var(--spacing-sm);
+    font-size: 0.85rem;
+    padding: 0.5rem;
+    border-radius: var(--border-radius-sm);
+}
+
+.recommendation {
+    background: #d4edda;
+}
+
+.age-warning {
+    background: #fff3cd;
+}
+
+.price-options {
+    margin-top: var(--spacing-sm);
+    font-size: 0.9rem;
+}
+
+.price-options p {
+    margin: 0.25rem 0;
+}
+
+.kids-registration {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    margin: var(--spacing-md) 0;
+}
+
+.kid-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-sm);
+    background: var(--gray-100);
+    border-radius: var(--border-radius-sm);
+}
+
+.kid-item .age-badge {
+    background: var(--msc-blue);
+    color: white;
+    padding: 0.2rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.app-features ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-sm);
+}
+
+.app-features li {
+    font-size: 0.9rem;
+}
+
+.app-download {
+    margin-top: var(--spacing-md);
+    padding: var(--spacing-md);
+    background: var(--msc-blue);
+    color: white;
+    border-radius: var(--border-radius-md);
+    text-align: center;
+}
+
+.drill-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.drill-info li {
+    margin-bottom: var(--spacing-sm);
+}
+
+.checklist {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-sm);
+    background: white;
+    border-radius: var(--border-radius-sm);
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.checkbox-item:hover {
+    background: var(--gray-100);
+}
+
+.checkbox-item input[type="checkbox"] {
+    width: 1.2rem;
+    height: 1.2rem;
+    accent-color: var(--success);
+}
+
+/* ========================================
+   Route Info Styles
+   ======================================== */
+
+.route-info {
+    background: white;
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius-lg);
+    margin-bottom: var(--spacing-xl);
+    box-shadow: var(--shadow-md);
+}
+
+.route-info h3 {
+    color: var(--msc-blue);
+    margin-bottom: var(--spacing-md);
+}
+
+.route-timeline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+}
+
+.route-point {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.point-marker {
+    width: 2rem;
+    height: 2rem;
+    background: var(--msc-blue);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+
+.point-info strong {
+    display: block;
+    color: var(--msc-blue);
+}
+
+.point-info span {
+    font-size: 0.85rem;
+    color: var(--gray-600);
+}
+
+.route-arrow {
+    font-size: 1.5rem;
+    color: var(--msc-gold);
+    font-weight: bold;
+}
+
+.route-segment {
+    background: var(--msc-blue);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    margin-bottom: var(--spacing-sm);
+    display: inline-block;
+}
+
+.weather-note {
+    font-size: 0.85rem;
+    color: var(--gray-600);
+    padding: var(--spacing-sm);
+    background: var(--gray-100);
+    border-radius: var(--border-radius-sm);
+    margin: var(--spacing-sm) 0;
+}
+
+/* Responsive for Todo Section */
+@media (max-width: 768px) {
+    .todo-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .show-booking-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .app-features ul {
+        grid-template-columns: 1fr;
+    }
+
+    .route-timeline {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .route-arrow {
+        transform: rotate(90deg);
+        align-self: center;
+    }
+}
