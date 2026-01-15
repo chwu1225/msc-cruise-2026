@@ -1,0 +1,20 @@
+{
+  "name": "msc-bellissima-cruise-info",
+  "version": "1.0.0",
+  "description": "MSC 榮耀號 基隆-東京航線旅遊資訊網站 2026/1/21-1/24",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve .",
+    "build": "echo 'Static site - no build required'"
+  },
+  "keywords": [
+    "msc",
+    "bellissima",
+    "cruise",
+    "travel",
+    "keelung",
+    "tokyo"
+  ],
+  "author": "Claude AI Assistant",
+  "license": "MIT"
+}
